@@ -7,28 +7,11 @@ const Exponent = ({ num, exponent }) => {
   }
   const expression = numArray.join(" * ");
 
-  const getExponentNum = (exponent) => {
-    switch (exponent) {
-      case 2:
-        return "²";
-      case 3:
-        return "³";
-      case 4:
-        return "⁴";
-      case 5:
-        return "⁵";
-      case 6:
-        return "⁶";
-      default:
-        return "there is no exponent!";
-    }
-  };
-
   return (
     <div className="exponent-counter-container">
       <p className="exponent-label">
         {num}
-        {getExponentNum(exponent)}
+        <sup>{exponent}</sup>
       </p>
       <p className="exponent-result">
         {expression} = <span className="total">{result}</span>
